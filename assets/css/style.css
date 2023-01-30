@@ -5,6 +5,14 @@
     --black:#13131a;
     --bg:#010103;
     --border:.1rem solid rgba(255,255,255,.3);
+
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
 }
 
 * {
@@ -39,7 +47,8 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    background: var(--bg);
+    background: linear-gradient(to right top, #000000, #040505);
+    
 }
 
 section {
@@ -125,14 +134,17 @@ section {
 .header .search-form {
     position: absolute;
     top: 115%; right: 7%;
-    background: #fff;
     width: 50rem; height: 5rem;
     display: flex;
     align-items: center;
     transform: scaleY(0);
     transform-origin: top;
-    
-    box-shadow: 3px 3px 3px rgba(126, 104, 104, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+    transition: 0.5s;
     
 }
 
@@ -144,18 +156,18 @@ section {
 .header .search-form input {
     height: 100%; width: 100%;
     font-size: 1.6rem;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    color: var(--black);
+    text-shadow: 2px 2px 2px rgba(1, 1, 1, 0.3);
+    color: white;
     padding: 1rem;
     text-transform: none;
-    
+    background: none;
 }
 
 .header .search-form label {
     cursor: pointer;
     font-size: 2.2rem;
     margin-right: 1.5rem;
-    color: var(--black);
+    color: #fff;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -167,10 +179,6 @@ section {
     position: absolute;
     top: 100%; right: -100%;
     height: calc(100vh - 9.5rem); width: 35rem;
-    /* background: rgba(255, 255, 255, 0.274); */
-    background-color: rgba(255, 255, 255, 0.8);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     padding: 0 1.5rem;
     transition: 2s;
@@ -193,7 +201,7 @@ section {
     top: 1rem; right: 1rem;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--black);
+    color: aqua;
 }
 
 .header .cart-items-container .cart-item .fa-times:hover {
@@ -206,8 +214,9 @@ section {
 
 .header .cart-items-container .cart-item h3 {
     font-size: 2rem;
-    color: var(--black);
+    color: #eee;
     padding-bottom: .5rem;
+    text-shadow: 3px 2px 3px rgba(1, 1, 1, 0.3);
 }
 
 .header .cart-items-container .cart-item .price {
@@ -250,7 +259,6 @@ section {
 .about .row {
     display: flex;
     align-items: center;
-    background:var(--black) ;
     flex-wrap: wrap;
 }
 
@@ -289,7 +297,7 @@ section {
 .menu .box-container .box {
     padding: 5rem;
     text-align: center;
-    border: var(--border);
+    border: 2px solid rgb(51, 48, 48);
 }
 
 .menu .box-container .box img {
@@ -308,20 +316,24 @@ section {
     padding: 5rem 0;
 }
 
-.menu .box-container .box .span {
-    color: #fff;
+.menu .box-container .box .price span {
+    color: rgb(255, 1, 1);
     font-size: 1.5rem;
     text-decoration: line-through;
     font-weight: lighter;
+    
 }
 
 .menu .box-container .box:hover {
-    background-color: #fff;
+     background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
 }
 
-.menu .box-container .box:hover > *{
+/* .menu .box-container .box:hover > *{
     color: var(--black);
-}
+} */
 
 .products .box-container {
     display: grid;
@@ -427,7 +439,6 @@ section {
 
 .contact .row {
     display: flex;
-    background: var(--black);
     flex-wrap: wrap;
     gap:1rem
 }
@@ -450,7 +461,7 @@ section {
     color: #fff;
 }
 
-.contact .row form .inputBox {
+.contact .row form .inputBox,form .my-alert {
     display: flex;
     align-items: center;
     margin-top: 2rem;
@@ -459,13 +470,13 @@ section {
     border: var(--border);
 }
 
-.contact .row form .inputBox span {
+.contact .row form .inputBox span, form .my-alert button span {
     color: #fff;
     font-size: 2rem;
     padding-left: 2rem;
 }
 
-.contact .row form .inputBox input {
+.contact .row form .inputBox input, form .my-alert button {
     width: 100%;
     padding:2rem;
     font-size: 1.7rem;
@@ -529,9 +540,62 @@ section {
     padding: 1rem 0;
 }
 
+footer {
+    border: none;
+    text-align: center;
+    font-family: 'poppins';
+}
 
+footer .share  {
+padding: 1rem 0;
+}
 
+footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    border-radius: 50%;
+    margin: .3rem;
+}
 
+footer .share a:hover {
+    background: var(--main-color);
+}
+
+footer  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+    font-size: 1.6rem;
+}
+
+footer .links a {
+    padding: .7rem 2rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+footer .links a:hover {
+    color: var(--main-color);
+}
+
+footer .credit {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+footer .credit span {
+    color: var(--main-color);
+}
 
 
 

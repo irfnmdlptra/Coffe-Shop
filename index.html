@@ -15,7 +15,7 @@
 
     <!-- My Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-
+  
   </head>
   <body>
     <!-- Header Section Start -->
@@ -28,8 +28,7 @@
             <a href="#home">Home</a>
             <a href="#about">Tentang Kami</a>
             <a href="#menu">Menu</a>
-            <a href="#product">Produk</a>
-            <a href="#review">Testimoni</a>
+            <a href="#products">Produk</a>
             <a href="#review">Testimoni</a>
             <a href="#contact">Kontak</a>
             <a href="#blogs">Blog</a>
@@ -46,7 +45,7 @@
             <label for="search-box" class="fas fa-search"></label>
         </div>
 
-        <div class="cart-items-container">
+        <div class="cart-items-container glass">
             <div class="cart-item">
                 <span class="fas fa-times"></span>
                 <img src="assets/img/menu/americano.jpg" alt="">
@@ -98,15 +97,15 @@
     <!-- Home Section End -->
     
     <!-- About Section Start -->
-    <section class="about" id="about">
-
+    <section class="about " id="about" >
+        
         <h1 class="heading"> <span>tentang</span> kami</h1>
 
-        <div class="row">
+        <div class="row glass " style="border: 2px solid rgba(238, 238, 238, 0.438);">
             <div class="image">
                 <img src="assets/img/tentang-kami.jpg" alt="coffe espresso">
             </div>
-
+            
             <div class="content">
                 <h3>what makes our coffe spesial?</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, explicabo! Voluptatum autem architecto omnis. Saepe fugit nulla accusantium eos neque.</p>
@@ -130,37 +129,37 @@
             <div class="box">
                 <img src="assets/img/menu/americano.jpg" alt="americano coffee">
                 <h3>testy and healty</h3>
-                <div class="price">IDR 293K <span>393k</span></div>
+                <div class="price">IDR 293K <span>IDR 393k</span></div>
                 <a href="" class="btn">add to cart</a>
             </div>
             <div class="box">
                 <img src="assets/img/menu/cappucino.jpg" alt="americano coffee">
                 <h3>testy and healty</h3>
-                <div class="price">IDR 293K <span>393k</span></div>
+                <div class="price">IDR 293K <span>IDR 393k</span></div>
                 <a href="" class="btn">add to cart</a>
             </div>
             <div class="box">
                 <img src="assets/img/menu/cold brew coffee.jpg" alt="americano coffee">
                 <h3>testy and healty</h3>
-                <div class="price">IDR 293K <span>393k</span></div>
+                <div class="price">IDR 293K <span>IDR 393k</span></div>
                 <a href="" class="btn">add to cart</a>
             </div>
             <div class="box">
                 <img src="assets/img/menu//espresso coffe.jpg" alt="americano coffee">
                 <h3>testy and healty</h3>
-                <div class="price">IDR 293K <span>393k</span></div>
+                <div class="price">IDR 293K <span>IDR 393k</span></div>
                 <a href="" class="btn">add to cart</a>
             </div>
             <div class="box">
                 <img src="assets/img/menu/frappé coffe.jpg" alt="americano coffee">
                 <h3>testy and healty</h3>
-                <div class="price">IDR 293K <span>393k</span></div>
+                <div class="price">IDR 293K <span>IDR 393k</span></div>
                 <a href="" class="btn">add to cart</a>
             </div>
             <div class="box">
                 <img src="assets/img/menu/latte coffe.jpg" alt="americano coffee">
                 <h3>testy and healty</h3>
-                <div class="price">IDR 293K <span>393k</span></div>
+                <div class="price">IDR 293K <span>IDR 393k</span></div>
                 <a href="" class="btn">add to cart</a>
             </div>
         </div>
@@ -367,25 +366,29 @@
 
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7943.855866928117!2d120.279616939738!3d-5.427918918531677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbc048b7e215f9f%3A0xe6289efdc799b627!2sLapangan%20Sepak%20Bola%20Allu!5e0!3m2!1sid!2sid!4v1675058168647!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <form name="cofshop-form" action="">
+            <form name="cofshop-form" action="" class="glass">
                 <h3>get in touch</h3>
+                <div class="my-alert ">
+                    <button type="submit"><span class="fas fa-warning"></span>Terimakasih! pesan anda telah kami terima.</button>
+                </div>
                 <div class="inputBox">
                     <span class="fas fa-user"></span>
-                    <input type="text" placeholder="nama">
+                    <input type="text" required title="Anda harus mengisi kontak form!" name="nama" placeholder="nama">
                 </div>
                 <div class="inputBox">
                     <span class="fas fa-map-location"></span>
-                    <input type="text" placeholder="alamat">
+                    <input type="text" required title="Anda harus mengisi kontak form!" name="alamat" placeholder="alamat">
                 </div>
                 <div class="inputBox">
                     <span class="fas fa-envelope"></span>
-                    <input type="email" placeholder="email">
+                    <input type="email" required title="Anda harus mengisi kontak form!" name="email" placeholder="email">
                 </div>
                 <div class="inputBox">
                     <span class="fas fa-phone"></span>
-                    <input type="number" placeholder="number">
+                    <input type="number" required pattern="^(\+62|08)[0-9]{8,12}$" title="Isi dulu ces" name="telepon" placeholder="telepon">
                 </div>
-                <button type="submit" class="btn" value="">kirim pesan</button>
+                <button type="submit" class="btn btn-kirim" value="">kirim pesan</button>
+                <button type="submit" class="btn btn-loading none" value="">loading</button>
             </form>
             
         </div>
@@ -434,7 +437,31 @@
         </div>
     </section>
     <!-- Blogs Section End -->
+    
+    <!-- Footer Section Start -->
+    <footer class="glass" style="border: none;">
 
+        <div class="share">
+            <a href="" class="fab fa-facebook"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a>
+            <a href="" class="fab fa-tiktok"></a>
+            <a href="" class="fab fa-whatsapp"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#products">Products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+            <a href="#blogs">blogs</a>
+        </div>
+
+        <div class="credit">created by <span>irfnmdlptra</span> | all rights reserved</div>
+    </footer>
+    <!-- Footer Section End -->
 
     <!-- My Javascript -->
     <script src="assets/js/script.js"></script>
