@@ -461,7 +461,7 @@ section {
     color: #fff;
 }
 
-.contact .row form .inputBox,form .my-alert {
+.contact .row form .inputBox {
     display: flex;
     align-items: center;
     margin-top: 2rem;
@@ -469,14 +469,27 @@ section {
     background: var(--bg);
     border: var(--border);
 }
+.contact .row form .my-alert button{
+    width: 100%;
+    background: none;
+    padding: 2rem;
+    color: aquamarine;
+    display: inline-block;
+    margin-top: 2rem;
+    background: var(--bg);
+    border: var(--border);
+    font-weight: bold;
+    font-size: 1.7rem;
+}
 
-.contact .row form .inputBox span, form .my-alert button span {
+
+.contact .row form .inputBox span {
     color: #fff;
     font-size: 2rem;
     padding-left: 2rem;
 }
 
-.contact .row form .inputBox input, form .my-alert button {
+.contact .row form .inputBox input{
     width: 100%;
     padding:2rem;
     font-size: 1.7rem;

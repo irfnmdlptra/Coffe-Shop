@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {
       btnLoading.classList.toggle("none");
       btnKirim.classList.toggle("none");
       window.addEventListener('click', function(){
-        myAlert.classList.add('none')
+          myAlert.classList.add("none");
       })
       form.reset();
     })
