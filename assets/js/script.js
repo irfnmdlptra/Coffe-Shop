@@ -32,19 +32,50 @@ window.onscroll = () => {
 
 
 
+// input searchButton
+
+const searchInput = document.querySelector("#searchInput");
+const searchButton = document.querySelector("#searchButton");
+const boxes = document.querySelectorAll(".box");
+
+searchButton.addEventListener("click", function() {
+  const filter = searchInput.value.toUpperCase();
+
+  for (const box of boxes) {
+    const h3 = box.querySelector("h3");
+
+    if (h3.innerText.toUpperCase().indexOf(filter) > -1) {
+      box.style.display = "";
+    } else {
+      box.style.display = "none";
+    }
+  }
+});
+
+    // <!-- Artikel lainnya -->
 
 
+searchInput.addEventListener("keyup", function(event) {
+if (event.key === "Enter") {
+  searchButton.click();
+}
+});
 
 
+// Variabel untuk menyimpan item cart
+let cartItems = [];
 
+// Fungsi untuk menambahkan item ke cart
+function addToCart(item) {
+cartItems.push(item);
+renderCart();
+}
 
-
-
-
-
-
-
-
+// Fungsi untuk menghapus item dari cart
+function removeFromCart(index) {
+cartItems.splice(index, 1);
+renderCart();
+}
 
 
 
